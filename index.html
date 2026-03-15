@@ -123,10 +123,9 @@
         footer {
             text-align: center;
             padding: 4rem 1rem;
-            font-size: 0.8rem;
-            color: #444;
-            letter-spacing: 0.5px;
-            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #555;
+            letter-spacing: 1px;
         }
 
         @media (max-width: 480px) {
@@ -154,6 +153,26 @@
 
         <section id="section-news">
             <h2>Новини та досягнення</h2>
+
+            <div class="card">
+                <div class="date-tag">15 березня 2026</div>
+                <h3>Створення акаунту Discord</h3>
+                <p>Командою було створено офіційний акаунт Discord. На даному етапі триває підготовка публічної групи спільноти, яка стане центральним майданчиком для обговорення та демонстрації проектів. Відповідні посилання будуть доступні на офіційних ресурсах команди: GitHub, YouTube та Discord.</p>
+            </div>
+
+            <div class="card">
+                <div class="date-tag">15 березня 2026</div>
+                <h3>Оновлення стратегії комунікації</h3>
+                <p>Наша команда MeshUniellaWall™ оцінювала можливості різних платформ для комунікації зі спільнотою. Ми зареєстрували акаунт у TikTok, але після тестування зрозуміли, що формат відеоплатформи не відповідає нашим потребам у текстовій взаємодії та комунікації з інженерною аудиторією.</p>
+                <p>Тому акаунт було видалено. Основний фокус команди залишається на сайті, GitHub і Discord, де ми забезпечуємо найважливіші новини та технічний контент для спільноти.</p>
+            </div>
+
+            <div class="card">
+                <div class="date-tag">10 березня 2026</div>
+                <h3>Реєстрація на GitHub</h3>
+                <p>Створено офіційний акаунт MeshUniellaWall на платформі GitHub для хостингу та управління програмними рішеннями команди. Посилання на профіль та інші ресурси розміщені на офіційних сторінках GitHub, YouTube та Discord для забезпечення взаємопов'язаної екосистеми комунікацій.</p>
+            </div>
+
             <div class="card">
                 <div class="date-tag">28 лютого 2026</div>
                 <h3>Офіційне заснування команди</h3>
@@ -178,8 +197,8 @@
         </section>
     </main>
 
-    <footer>  
-        &copy; 2026 MeshUniellaWall™ <br>  
+    <footer>
+        &copy; MeshUniellaWall™
     </footer>
 
     <script>
@@ -189,27 +208,21 @@
             const spec = document.getElementById('section-specialization');
 
             if (pageName === 'all') {
-
                 intro.style.display = 'block';
                 news.style.display = 'block';
                 spec.style.display = 'block';
             } else if (pageName === 'news') {
-
                 intro.style.display = 'none';
                 news.style.display = 'block';
                 spec.style.display = 'none';
             } else if (pageName === 'specialization') {
-
                 intro.style.display = 'none';
                 news.style.display = 'none';
                 spec.style.display = 'block';
             }
-
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
         showPage('all');
     </script>
-
 </body>
-  </html>
+    </html>
