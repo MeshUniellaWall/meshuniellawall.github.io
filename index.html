@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <title>MeshUniellaWall™ Незалежна команда</title>
+    
     <style>
         :root {
             --bg-color: #0a0a0a;
@@ -68,19 +76,12 @@
             padding: 4rem 0 2rem;
             border-bottom: 1px solid var(--border-color);
             animation: fadeIn 0.4s ease-in-out;
+            display: none;
         }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero-text p:first-of-type {
-            border-left: 3px solid var(--accent-color);
-            padding-left: 20px;
-            font-size: 1.15rem;
-            color: #fff;
-            margin-bottom: 1.5rem;
         }
 
         h2 {
@@ -132,7 +133,9 @@
 
         footer {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 4rem 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
             font-size: 0.9rem;
             color: #555;
             letter-spacing: 1px;
@@ -140,7 +143,6 @@
 
         @media (max-width: 480px) {
             nav a { font-size: 0.7rem; }
-            .hero-text p:first-of-type { font-size: 1.05rem; }
             section { padding: 3rem 0 1rem; }
         }
     </style>
@@ -157,101 +159,88 @@
     </header>
 
     <main>
-        <section id="section-intro" class="hero-text">
-            <p><strong>MeshUniellaWall™ незалежна команда що спеціалізується на розробці рішень у сферах космічних досліджень та прикладної фізики та розробки коду!</strong></p>
-            <p>Ми об'єднані спільною метою: створювати програмне забезпечення, яке розсуває межі сучасних обчислень. Наш шлях тільки починається, але фундамент закладено на принципах точності та інновацій. <span class="read-more" onclick="showPage('news')">Читати далі про наші етапи</span></p>
-        </section>
-
         <section id="section-news">
             <h2>Новини та досягнення</h2>
-
             <div class="card">
                 <div class="date-tag">15 березня 2026</div>
                 <h3>Запуск MeshUniellaWall Tech Community</h3>
-                <p>Офіційно створено MeshUniellaWall Tech Community в Discord. Дане ком'юніті призначене для обговорення технічних проектів, взаємодії між учасниками та прямої комунікації з розробником. Платформа дозволяє користувачам обмінюватися досвідом та отримувати експертну інформацію безпосередньо від автора.</p>
-                <p>Офіційні посилання для доступу вже розміщені на YouTube-каналі та GitHub-сторінці команди. Кожен офіційний ресурс містить актуальні посилання на інші майданчики екосистеми MeshUniellaWall™.</p>
+                <p>Офіційно створено MeshUniellaWall Tech Community в Discord. Дане ком'юніті призначене для обговорення технічних проектів, взаємодії між учасниками та прямої комунікації з розробником.</p>
             </div>
-
             <div class="card">
                 <div class="date-tag">15 березня 2026</div>
                 <h3>Оновлення стратегії комунікації</h3>
-                <p>Наша команда MeshUniellaWall™ оцінювала можливості різних платформ для комунікації зі спільнотою. Ми зареєстрували акаунт у TikTok, але після тестування зрозуміли, що формат відеоплатформи не відповідає нашим потребам у текстовій взаємодії та комунікації з інженерною аудиторією. Акаунт було видалено.</p>
+                <p>Ми зареєстрували акаунт у TikTok, але формат відеоплатформи не відповідає потребам інженерної аудиторії. Акаунт було видалено.</p>
             </div>
-
             <div class="card">
                 <div class="date-tag">10 березня 2026</div>
                 <h3>Реєстрація на GitHub</h3>
-                <p>Створено офіційний акаунт MeshUniellaWall на платформі GitHub для управління програмними рішеннями. Посилання на профіль та інші ресурси розміщені на офіційних сторінках GitHub, YouTube та Discord.</p>
+                <p>Створено офіційний акаунт MeshUniellaWall на платформі GitHub для управління програмними рішеннями.</p>
             </div>
-
             <div class="card">
                 <div class="date-tag">28 лютого 2026</div>
                 <h3>Офіційне заснування команди</h3>
-                <p>MeshUniellaWall™ розпочинає свій шлях як незалежне об'єднання розробників у галузі космічних технологій та фізичних симуляцій.</p>
+                <p>MeshUniellaWall™ розпочинає свій шлях як незалежне об'єднання розробників.</p>
+                <p>"Безпека — Основа Наших Технологій!"</p>
             </div>
         </section>
 
         <section id="section-specialization">
             <h2>На чому ми спеціалізуємося</h2>
             <div class="card">
-                <h3>Космічне ПЗ</h3>
-                <p>Розробка алгоритмів для навігації, аналізу траєкторій та обробки телеметрії космічних апаратів.</p>
+                <h3>Програмне Забезпечення</h3>
+                <p>Розробка алгоритмів для навігації, аналізу траєкторій та обробки телеметрії.</p>
             </div>
             <div class="card">
-                <h3>Прикладна фізика</h3>
-                <p>Створення моделей для симуляції фізичних процесів, термодинаміки та складних механічних систем.</p>
+                <h3>Прикладна Фізика Та Код</h3>
+                <p>Створення моделей для симуляції фізичних процесів та термодинаміки.</p>
             </div>
             <div class="card">
-                <h3>Високопродуктивні обчислення</h3>
-                <p>Оптимізація критично важливого коду для виконання складних математичних розрахунків у реальному часі.</p>
+                <h3>Високоякісні Алгоритми</h3>
+                <p>Оптимізація критично важливого коду для складних математичних розрахунків.</p>
             </div>
         </section>
 
         <section id="section-socials">
             <h2>Ми в інтернеті</h2>
-            <a href="https://github.com/MeshUniellaWall" class="card" target="_blank">
+            <a href="https://github.com/MeshUniellaWall" class="card" target="_blank" rel="noopener noreferrer">
                 <h3>Посилання На Сторінку GitHub</h3>
             </a>
-            <a href="https://discord.gg/hxUDjBKANb" class="card" target="_blank">
+            <a href="https://discord.gg/hxUDjBKANb" class="card" target="_blank" rel="noopener noreferrer">
                 <h3>Посилання На Спільноту Discord</h3>
             </a>
-            <a href="https://youtube.com/@meshuniellawall" class="card" target="_blank">
+            <a href="https://youtube.com/@meshuniellawall" class="card" target="_blank" rel="noopener noreferrer">
                 <h3>Посилання На Сторінку YouTube</h3>
             </a>
         </section>
     </main>
 
-    <footer>
-        &copy; MeshUniellaWall™
+    <footer id="footer-">
+        &copy; <span id="year"></span> MeshUniellaWall™
     </footer>
 
     <script>
-        function showPage(pageName) {
-            const intro = document.getElementById('section-intro');
-            const news = document.getElementById('section-news');
-            const spec = document.getElementById('section-specialization');
-            const socials = document.getElementById('section-socials');
+        const sections = {
+            news: document.getElementById('section-news'),
+            spec: document.getElementById('section-specialization'),
+            socials: document.getElementById('section-socials')
+        };
 
-            intro.style.display = 'none';
-            news.style.display = 'none';
-            spec.style.display = 'none';
-            socials.style.display = 'none';
+        function showPage(pageName) {
+            Object.values(sections).forEach(s => s.style.display = 'none');
 
             if (pageName === 'all') {
-                intro.style.display = 'block';
-                news.style.display = 'block';
-                spec.style.display = 'block';
-
-            } else if (pageName === 'news') {
-                news.style.display = 'block';
-            } else if (pageName === 'specialization') {
-                spec.style.display = 'block';
-            } else if (pageName === 'socials') {
-                socials.style.display = 'block';
+                ['news', 'spec'].forEach(k => sections[k].style.display = 'block');
+            } else {
+                const target = pageName === 'specialization' ? 'spec' : pageName;
+                if (sections[target]) sections[target].style.display = 'block';
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        showPage('all');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+            showPage('all');
+        });
     </script>
 </body>
 </html>
