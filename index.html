@@ -38,8 +38,10 @@
         nav {
             display: flex;
             justify-content: space-evenly;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         nav a {
@@ -51,6 +53,7 @@
             font-weight: 600;
             transition: color 0.3s ease;
             cursor: pointer;
+            white-space: nowrap;
         }
 
         nav a:hover { color: var(--accent-color); }
@@ -93,13 +96,20 @@
             padding: 1.8rem;
             margin-bottom: 1.5rem;
             border: 1px solid var(--border-color);
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
         }
 
         .card h3 {
-            margin-top: 0;
+            margin: 0;
             color: var(--accent-color);
             font-size: 1.2rem;
-            margin-bottom: 0.8rem;
         }
 
         .date-tag {
@@ -129,7 +139,7 @@
         }
 
         @media (max-width: 480px) {
-            nav a { font-size: 0.75rem; }
+            nav a { font-size: 0.7rem; }
             .hero-text p:first-of-type { font-size: 1.05rem; }
             section { padding: 3rem 0 1rem; }
         }
@@ -142,6 +152,7 @@
             <a onclick="showPage('all')">Головна</a>
             <a onclick="showPage('news')">Новини</a>
             <a onclick="showPage('specialization')">Спеціалізація</a>
+            <a onclick="showPage('socials')">Ми в інтернеті</a>
         </nav>
     </header>
 
@@ -156,27 +167,27 @@
 
             <div class="card">
                 <div class="date-tag">15 березня 2026</div>
-                <h3>Створення акаунту Discord</h3>
-                <p>Командою було створено офіційний акаунт Discord. На даному етапі триває підготовка публічної групи спільноти, яка стане центральним майданчиком для обговорення та демонстрації проектів. Відповідні посилання будуть доступні на офіційних ресурсах команди: GitHub, YouTube та Discord.</p>
+                <h3>Запуск MeshUniellaWall Tech Community</h3>
+                <p>Офіційно створено MeshUniellaWall Tech Community в Discord. Дане ком'юніті призначене для обговорення технічних проектів, взаємодії між учасниками та прямої комунікації з розробником. Платформа дозволяє користувачам обмінюватися досвідом та отримувати експертну інформацію безпосередньо від автора.</p>
+                <p>Офіційні посилання для доступу вже розміщені на YouTube-каналі та GitHub-сторінці команди. Кожен офіційний ресурс містить актуальні посилання на інші майданчики екосистеми MeshUniellaWall™.</p>
             </div>
 
             <div class="card">
                 <div class="date-tag">15 березня 2026</div>
                 <h3>Оновлення стратегії комунікації</h3>
-                <p>Наша команда MeshUniellaWall™ оцінювала можливості різних платформ для комунікації зі спільнотою. Ми зареєстрували акаунт у TikTok, але після тестування зрозуміли, що формат відеоплатформи не відповідає нашим потребам у текстовій взаємодії та комунікації з інженерною аудиторією.</p>
-                <p>Тому акаунт було видалено. Основний фокус команди залишається на сайті, GitHub і Discord, де ми забезпечуємо найважливіші новини та технічний контент для спільноти.</p>
+                <p>Наша команда MeshUniellaWall™ оцінювала можливості різних платформ для комунікації зі спільнотою. Ми зареєстрували акаунт у TikTok, але після тестування зрозуміли, що формат відеоплатформи не відповідає нашим потребам у текстовій взаємодії та комунікації з інженерною аудиторією. Акаунт було видалено.</p>
             </div>
 
             <div class="card">
                 <div class="date-tag">10 березня 2026</div>
                 <h3>Реєстрація на GitHub</h3>
-                <p>Створено офіційний акаунт MeshUniellaWall на платформі GitHub для хостингу та управління програмними рішеннями команди. Посилання на профіль та інші ресурси розміщені на офіційних сторінках GitHub, YouTube та Discord для забезпечення взаємопов'язаної екосистеми комунікацій.</p>
+                <p>Створено офіційний акаунт MeshUniellaWall на платформі GitHub для управління програмними рішеннями. Посилання на профіль та інші ресурси розміщені на офіційних сторінках GitHub, YouTube та Discord.</p>
             </div>
 
             <div class="card">
                 <div class="date-tag">28 лютого 2026</div>
                 <h3>Офіційне заснування команди</h3>
-                <p>Сьогодні MeshUniellaWall™ розпочинає свій шлях як незалежне об'єднання розробників. Цей день є відправною точкою для наших майбутніх проектів у галузі космічних технологій, фізичних симуляцій та написання високопродуктивного коду.</p>
+                <p>MeshUniellaWall™ розпочинає свій шлях як незалежне об'єднання розробників у галузі космічних технологій та фізичних симуляцій.</p>
             </div>
         </section>
 
@@ -195,6 +206,19 @@
                 <p>Оптимізація критично важливого коду для виконання складних математичних розрахунків у реальному часі.</p>
             </div>
         </section>
+
+        <section id="section-socials">
+            <h2>Ми в інтернеті</h2>
+            <a href="https://github.com/MeshUniellaWall" class="card" target="_blank">
+                <h3>Посилання На Сторінку GitHub</h3>
+            </a>
+            <a href="https://discord.gg/hxUDjBKANb" class="card" target="_blank">
+                <h3>Посилання На Спільноту Discord</h3>
+            </a>
+            <a href="https://youtube.com/@meshuniellawall" class="card" target="_blank">
+                <h3>Посилання На Сторінку YouTube</h3>
+            </a>
+        </section>
     </main>
 
     <footer>
@@ -206,23 +230,28 @@
             const intro = document.getElementById('section-intro');
             const news = document.getElementById('section-news');
             const spec = document.getElementById('section-specialization');
+            const socials = document.getElementById('section-socials');
+
+            intro.style.display = 'none';
+            news.style.display = 'none';
+            spec.style.display = 'none';
+            socials.style.display = 'none';
 
             if (pageName === 'all') {
                 intro.style.display = 'block';
                 news.style.display = 'block';
                 spec.style.display = 'block';
+
             } else if (pageName === 'news') {
-                intro.style.display = 'none';
                 news.style.display = 'block';
-                spec.style.display = 'none';
             } else if (pageName === 'specialization') {
-                intro.style.display = 'none';
-                news.style.display = 'none';
                 spec.style.display = 'block';
+            } else if (pageName === 'socials') {
+                socials.style.display = 'block';
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         showPage('all');
     </script>
 </body>
-    </html>
+</html>
